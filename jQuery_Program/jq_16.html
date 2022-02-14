@@ -1,0 +1,28 @@
+<!-- 16. Finds every paragraph element on the page and add red border to all paragraph -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JQ_16</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>
+      HTML stands for Hyper Text Markup Language.
+    </p>
+    <p>
+      HTML stands for Hyper Text Markup Language.
+    </p>
+    <p>
+      HTML stands for Hyper Text Markup Language.
+    </p>
+
+    
+    <button>Click to add</button>
+    <script>
+      $("button").click(() => {
+        $("p").css("border", "2px solid red");
+      });
+    </script>
+  </body>
+</html>

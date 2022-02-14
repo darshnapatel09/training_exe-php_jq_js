@@ -1,0 +1,31 @@
+<!-- 12. Finds all checkbox inputs. Print count. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JQ_12</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    
+      <label>Hobbies:</label><br> 
+      <input type="checkbox" class="check" />Eating <br />
+      <input type="checkbox" class="check" />Writing <br />
+      <input type="checkbox" class="check" />Travelling
+  
+    <br />
+    <button>Submit</button>
+    <p></p>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          var hobby = $("input:checked").length;
+          if (hobby > 0) {
+            $("p").html("Total checkbox is:" + hobby);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

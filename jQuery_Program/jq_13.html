@@ -1,0 +1,19 @@
+<!-- 13. Finds the checked radio input -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JQ_13</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <input type="radio" name="color" value="BLUE" />BLUE
+    <input type="radio" name="color" value="RED" />RED
+    <input type="radio" name="color" value="PINK" />PINK
+    <p></p>
+    <script>
+      $("input").click(function () {
+        $("p").html($("input:checked").val() + "&nbsp" + "is checked");
+      });
+    </script>
+  </body>
+</html>

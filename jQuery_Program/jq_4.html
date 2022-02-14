@@ -1,0 +1,64 @@
+<!-- 4. Given a paragraph and a button. Add some css to paragraph using class. On click of button, remove all CSS classes of paragraph using jQuery -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JQ_4</title>
+	<link rel="stylesheet" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		.h1_tag
+		{
+			font-family: sans-serif;
+			font-style: italic;
+			font-size: 40px;
+			color:#0fff9b;
+
+		}
+		.text
+		{
+			background-color: #d7abc9;
+			color:#8b0f65;
+			font-size:40px;
+			text-shadow: 5px 5px 5px #d354aa;
+		}
+		.p_tag
+		{
+			
+			font-family: cursive;
+		}
+	</style>
+</head>
+<body>
+	<div style="width: 700px;">
+		<h1 class="h1_tag">Jquery Class Events</h1>
+		<p class="p_tag"> Add Class,Remove Class,Toggle Class</p>
+
+	</div>
+	<button type="button" class="btn1">Add Class</button>
+	<button type="button" class="btn2">Remove Class</button>
+	<button type="button" class="btn3">Toggle Class</button>
+
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('.btn1').click(function(event) {
+				/* Act on the event */
+				$('.p_tag').addClass('text');
+			});
+
+			$('.btn2').click(function(event) {
+				/* Act on the event */
+				$('.p_tag').removeClass('text');
+			});
+
+			$('.btn3').click(function(event) {
+				/* Act on the event */
+				$('.p_tag').toggleClass('text');
+			});
+		});
+	</script>
+</body>
+</html>
